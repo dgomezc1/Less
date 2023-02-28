@@ -4,18 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Attraction;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class AttractionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
         $viewData = [];
         $viewData["title"] = "Attraction - Less";
         $viewData["subtitle"] =  "Attractions";
-        $viewData["attraction"] = Attraction::all();
+        $viewData["attractions"] = Attraction::all();
         return view('attraction.index')->with("viewData", $viewData);
 
     }

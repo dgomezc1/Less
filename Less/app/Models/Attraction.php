@@ -149,6 +149,6 @@ class Attraction extends Model
     }
     public function setAttractionTimeAttribute($value)
     {
-        $this->attributes['attraction_time'] = $value
+        $this->attributes['attraction_time'] = $value;
     }
 }

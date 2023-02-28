@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('attractions', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->double('latitude', 10, 10);
-            $table->double('longitude', 10, 10);
+            $table->double('latitude', 100, 10);
+            $table->double('longitude', 100, 10);
             $table->integer('estimated_waiting_time');
             $table->integer('capacity');
             $table->integer('min_age');
